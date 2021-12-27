@@ -10,7 +10,6 @@
     }
     
     #sky {
-        background-image: url("imgs/landscape.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         height: 30vh;
@@ -18,6 +17,21 @@
         position: absolute;
         top: 0;
         overflow: hidden;
+    }
+    
+    body {
+        background-image: url("imgs/landscape.jpg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-attachment: fixed;
+    }
+    
+    .daySky {
+        background-image: url("imgs/landscape.jpg");
+    }
+    
+    .nightSky {
+        background-image: url("imgs/night.png");
     }
     
     #cloud {

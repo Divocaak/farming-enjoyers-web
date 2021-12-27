@@ -15,19 +15,19 @@
     <div id="night"></div>
     <img id="farmer" src="imgs/person.png">
 
-    <div id="world">
-        <div id="sky">
-            <img id="sun" class="object" src="imgs/sun.png">
-            <img id="cloud" class="object" src="imgs/cloud.png">
-            <img id="moon" class="object" src="imgs/moon.png">
+    <!--  <div id="world">
+        <div id="sky" class="daySky">
         </div>
         <div id="grass"></div>
-    </div>
+    </div> -->
 
+    <img id="sun" class="object" src="imgs/sun.png">
+    <img id="cloud" class="object" src="imgs/cloud.png">
+    <img id="moon" class="object" src="imgs/moon.png">
 
     <div class="empty"></div>
     <div class="empty">
-        <h2 id="areaTrigger">Area</h2>
+        <h2 id="areaTrigger">Area 🍆</h2>
         <img id="area" class="object initOffScreen" src="imgs/area.jpg">
     </div>
     <div class="empty">
@@ -42,11 +42,15 @@
         <h2 id="plantTrigger">Plant</h2>
         <img id="plant" class="object initOffScreen initOnArea" src="imgs/plant.png">
     </div>
-
     <div class="empty">
+        <h2 id="economyTrigger">Economy</h2>
+        <img id="money" class="object initOffScreen initOnArea" src="imgs/money.png">
+    </div>
+
+    <div id="last" class="empty">
         <h2>empty</h2>
     </div>
-    <div id="last" class="empty"></div>
+
 
     <script src=" https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js ">
     </script>
