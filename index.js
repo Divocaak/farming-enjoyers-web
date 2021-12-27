@@ -76,29 +76,76 @@ timeline.to("#area", {
     }
 }) */
 
+gsap.to("#grass", {
+    backgroundPosition: "0% -100%",
+    scrollTrigger: {
+        scrub: true
+    }
+});
+
+gsap.to("#cloud", {
+    x: "190vh",
+    scrollTrigger: {
+        scrub: 2
+    }
+});
+
+gsap.to("#sun", {
+    x: "190vh",
+    scrollTrigger: {
+        scrub: true,
+        endTrigger: "#moonTrigger",
+        end: "#moonTrigger 40%",
+    }
+});
+
+gsap.to("#moon", {
+    x: "190vh",
+    scrollTrigger: {
+        scrub: true,
+        trigger: "#moonTrigger",
+        start: "#moonTrigger 80%",
+        endTrigger: "#plantTrigger",
+        end: "#plantTrigger center",
+    }
+});
+
 ScrollTrigger.create({
     trigger: '#areaTrigger',
     endTrigger: '#last',
     start: 'center center',
     pin: "#area",
-    pinSpacing: false,
-    markers: true,
     onEnter: () => gsap.to("#area", {
         opacity: 1,
-        x: 300
-    })
+        x: 600,
+    }),
+    onLeaveBack: () => gsap.to("#area", {
+        opacity: 0,
+        x: -600,
+    }),
 })
+
 
 ScrollTrigger.create({
     trigger: '#seedTrigger',
-    endTrigger: '#last',
+    endTrigger: "#last",
     start: 'center center',
     pin: "#seed",
-    pinSpacing: false,
-    markers: true,
     onEnter: () => gsap.to("#seed", {
         opacity: 1,
-        x: 300
+        x: 600,
+    }),
+    onLeave: () => gsap.to("#seed", {
+        opacity: 0,
+        x: -600,
+    }),
+})
+
+ScrollTrigger.create({
+    trigger: '#plantTrigger',
+    start: 'center center',
+    onEnter: () => gsap.to("#seed", {
+        opacity: 0,
     })
 })
 
@@ -107,10 +154,29 @@ ScrollTrigger.create({
     endTrigger: '#last',
     start: 'center center',
     pin: "#plant",
-    pinSpacing: false,
-    markers: true,
     onEnter: () => gsap.to("#plant", {
         opacity: 1,
-        x: 300
-    })
+    }),
+    onLeaveBack: () => gsap.to("#plant", {
+        opacity: 0,
+    }),
+})
+
+ScrollTrigger.create({
+    trigger: "#moonTrigger",
+    start: "#moonTrigger 80%",
+    endTrigger: "#plantTrigger",
+    end: "#plantTrigger center",
+    onEnter: () => gsap.to("#night", {
+        opacity: .4,
+    }),
+    onLeave: () => gsap.to("#night", {
+        opacity: 0,
+    }),
+    onEnterBack: () => gsap.to("#night", {
+        opacity: .4,
+    }),
+    onLeaveBack: () => gsap.to("#night", {
+        opacity: 0,
+    }),
 })
