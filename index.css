@@ -1,114 +1,17 @@
-    #grass {
-        background-image: url("imgs/grass.jpg");
-        background-repeat: repeat;
-        background-position-y: 0px;
-        background-size: 20%;
-        height: 70vh;
-        width: 100vw;
-        position: absolute;
-        bottom: 0;
-    }
-    
-    #sky {
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 30vh;
-        width: 100vw;
-        position: absolute;
-        top: 0;
-        overflow: hidden;
-    }
-    
-    body {
-        /* background-image: url("imgs/landscape.jpg");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-attachment: fixed; */
-        background-image: url("imgs/grass.jpg");
-        background-repeat: repeat;
-        background-size: 10%;
-        background-attachment: fixed;
-    }
-    
-    .daySky {
-        background-image: url("imgs/landscape.jpg");
-    }
-    
-    .nightSky {
-        background-image: url("imgs/night.png");
-    }
-    
-    #cloud {
-        position: absolute;
-        left: -23vw;
-    }
-    
-    #sun {
-        position: absolute;
-        left: -23vw;
-    }
-    
-    #moon {
-        position: absolute;
-        left: -23vw;
-    }
-    
-    #world {
-        position: sticky;
-        top: 0;
-        height: 100vh;
-        width: 100vw;
-        z-index: 1;
-    }
-    
-    #farmer {
-        position: fixed;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
-        top: 40%;
-        width: auto;
-        height: 20%;
-        z-index: 2;
-    }
-    
-    .empty {
-        height: 50vh;
-    }
-    
-    .empty * {
-        position: relative;
-        z-index: 2;
-    }
-    
-    .object {
-        height: 300px;
-        width: 300px;
-    }
-    
-    .initOffScreen {
-        opacity: 0;
-        left: -300px;
-    }
-    
-    .initOnArea {
-        position: relative;
-        left: 300px;
-    }
-    
-    #night {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100vh;
-        width: 100vw;
-        background-color: midnightblue;
-        opacity: 0;
-        z-index: 3;
-    }
-    
-    #lake {
-        position: absolute;
-        right: 0;
-    }
+.bg-image-settings {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.filter {
+    background-color: black;
+    z-index: 1;
+    opacity: .4;
+}
+
+.content {
+    z-index: 2;
+    overflow: hidden;
+    height: 100vh;
+    padding: 20vh;
+}
