@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>How does it work</title>
+    <!-- NOTE bs mby wont need -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- NOTE bs icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="mechanics.css">
+</head>
+
+<body>
+    <div id="night"></div>
+    <img id="farmer" src="imgs/person.png">
+
+    <img id="sun" class="object skyObject" src="imgs/sun.png">
+    <img id="cloud" class="object skyObject" src="imgs/cloud.png">
+    <img id="moon" class="object skyObject" src="imgs/moon.png">
+
+    <div class="empty"></div>
+    <div class="empty">
+        <h2 id="areaTrigger">Area 🍆</h2>
+        <img id="area" class="object initOffScreen" src="imgs/area.jpg">
+    </div>
+    <div class="empty">
+        <h2 id="seedTrigger">Seed</h2>
+        <img id="seed" class="object initOffScreen" src="imgs/seed.png">
+    </div>
+    <div class="empty">
+        <h2 id="moonTrigger">moonlight sonata</h2>
+    </div>
+    <div class="empty">
+        <h2 id="plantTrigger">Plant</h2>
+        <img id="plant" class="object initOffScreen initOnArea" src="imgs/plant.png">
+    </div>
+    <div class="empty">
+        <h2 id="economyTrigger">Economy</h2>
+        <img id="money" class="object initOffScreen initOnArea" src="imgs/money.png">
+    </div>
+
+    <div id="last" class="empty">
+        <h2>empty</h2>
+    </div>
+
+
+    <script src="mechanics.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js "></script>
+    <!-- NOTE jquery, mby wont need -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js " integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin=" anonymous "></script>
+    <!-- NOTE bs jquery, mby wont need -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx " crossorigin="anonymous "></script>
+</body>
+
+</html>
